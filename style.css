@@ -1,0 +1,61 @@
+body {
+    background: linear-gradient(135deg, #0c1633, #1a2e5f);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    margin: 0;
+}
+div, header, nav {
+    background: linear-gradient(135deg, #000033, #000066); /* Azul escuro para azul médio */
+    text-align: justify;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    margin-bottom: 20px;
+}
+
+button {
+    background: linear-gradient(135deg, #000066, #000099); /* Azul médio para azul mais claro */
+    color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+img {
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.perfil_index img {
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+  }
+  
+  .perfil_index img:hover {
+    transform: scale(1.1); /* Aumenta a escala da imagem em 10% no hover */
+  }
+  
+
+.blue-background {
+    background-color: #004080; /* Azul escuro */
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
