@@ -1,9 +1,11 @@
 body {
-    background: linear-gradient(135deg, #0c1633, #1a2e5f);
+    background: linear-gradient(135deg, #000033, #000066);
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
     overflow-x: hidden;
     margin: 0;
+    justify-content: center;
+    align-items: center;
 }
 div, header, nav {
     background: linear-gradient(135deg, #000033, #000066); /* Azul escuro para azul médio */
@@ -13,6 +15,11 @@ div, header, nav {
     text-align: center;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     margin-bottom: 20px;
+}
+.informações{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 button {
@@ -28,8 +35,14 @@ button {
 
 button:hover {
     transform: translateY(-2px);
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 10px 0px rgba(255, 255, 255, 0.75);
 }
+.Linguagens:hover{
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 10px 0px rgba(255, 252, 252, 0.75);
+    cursor: pointer;
+}
+
 
 .material-symbols-outlined {
     font-variation-settings:
@@ -39,9 +52,12 @@ button:hover {
     'opsz' 24
 }
 
-img {
+.Perfil {
     border-radius: 30px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.perfil_index{
+    border-radius: 10%;
 }
 
 .perfil_index img {
@@ -58,4 +74,26 @@ img {
     color: #ffffff;
     padding: 10px;
     border-radius: 5px;
+}
+.contact{
+    border-radius: 30px;
+}
+.contact:hover{
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 10px 0px rgba(255, 252, 252, 0.75);
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+@keyframes move {
+    0% {
+        transform: translatey(100px);
+    }
+    100% {
+        transform: translatey(350px);
+    }
 }
