@@ -14,7 +14,8 @@ function calcularIdade(dataNascimento) {
 function atualizarIdade() {
   var dataNascimento = "2008-01-24"; // Data de nascimento no formato "YYYY-MM-DD"
   var idade = calcularIdade(dataNascimento);
-  document.getElementById("idade").textContent = idade + " anos";
+  /*document.getElementById("idade").textContent = idade + " anos";*/
+  document.getElementById("idade").textContent = "👋🏽 Olá, Me chamo Mateus Juan, tenho " + idade + " anos";
 }
 
 // Chamada inicial para definir a idade ao carregar a página
