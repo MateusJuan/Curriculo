@@ -6,6 +6,7 @@ body {
     margin: 0;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 div, header, nav {
     background: linear-gradient(135deg, #000033, #000066); /* Azul escuro para azul médio */
