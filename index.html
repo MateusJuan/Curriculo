@@ -1,57 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>Curriculo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mateus Juan | Portfólio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="scroll-animation">
+<body>
     <header>
-        <nav>
-            <div class="perfil_index">
-                <img src="Mateus2.jpg" alt="Perfil" height="50" width="50" class="Perfil">
-            <a href="index.html" ><button><span class="material-symbols-outlined">home</span>Inico</button></a>
-            <a href="experiencias.html"><button><span class="material-symbols-outlined">history_edu</span>Experiencias</button></a>
-            <a href="certificates.html"><button><span class="material-symbols-outlined">workspace_premium</span>Certificados</button></a>
-        </nav> 
-    <br><br><br>
-    <nav>
-<div class="informações"></div>
-        <img src="Mateus2.jpg" alt="Minha Foto" height="300" width="300" class="perfil_index">
-        <br>
-            <p id="idade">Tenho</p>
-            <p>🌱 Atualmente Estou aprendendo as Linguagens:</p>
-             <br>
-                <img loading="lazy" src="https://cdn.worldvectorlogo.com/logos/react-native-1.svg" width="60" height="60" class="Linguagens"/>
-                <br>
-            <p>Já possuo Domínio sobre:</p>
-             <br>
-             <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/768px-HTML5_logo_and_wordmark.svg.png" width="65" height="65" class="Linguagens"/>
-             <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" width="55" height="65" class="Linguagens"/>
-             <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Javascript_badge.svg/946px-Javascript_badge.svg.png" width="65" height="65" class="Linguagens"/>
-             <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" width="65" height="65" class="Linguagens"/>
-             <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" width="140" height="65" class="Linguagens"/>
-             <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/800px-ISO_C%2B%2B_Logo.svg.png" width="60" height="60" class="Linguagens"/>
-             <img loading="lazy" src="https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-icone-da-linguagem-de-programacao-java.png" width="80" height="70"/>
-             <br>
-             <p>📫 Você pode entrar em contato Comigo através das minhas redes abaixo:</p>
-                 <a href="https://www.instagram.com/dev_juan.jsx?igsh=MWRzM2t5MHVsMW9xaw==" target="_blank">
-                     <img loading="lazy" src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank" class="contact">
-                 </a>
-                 <a href="https://www.linkedin.com/in/mateus-juan-09b9b2298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-                     <img loading="lazy" src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" class="contact">
-                 </a>
-                 <br><br><br>
-               <a href="https://github-readme-stats.vercel.app/api/top-langs/?username=MateusJuan&layout=compact&langs_count=7&theme=transparent">
-                 <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MateusJuan&layout=compact&langs_count=7&theme=transparent"/>
-               </a>
-               <a href="https://github-readme-stats.vercel.app/api?username=MateusJuan&show_icons=true&theme=transparent&include_all_commits=true&count_private=true"><img height="180em" src="https://github-readme-stats.vercel.app/api?username=MateusJuan&show_icons=true&theme=transparent&include_all_commits=true&count_private=true"/></a>
+        <div class="perfil_index">
+          <img src="https://avatars.githubusercontent.com/u/169060996?s=400&u=60b4809998126d5a22c843c47396eaacd9b326a9&v=4" alt="Perfil" height="50" width="50">
+          <span class="typing-name" id="typing-name"></span>
         </div>
+        <nav>
+          <button onclick="scrollToSection('inicio')">
+            <span class="material-symbols-outlined">home</span>Início
+          </button>
+          <button onclick="scrollToSection('experiencias')">
+            <span class="material-symbols-outlined">history_edu</span>Experiências
+          </button>
+          <button onclick="scrollToSection('certificados')">
+            <span class="material-symbols-outlined">workspace_premium</span>Certificados
+          </button>
+        </nav>
+      </header>
 
-           
-<script src="idade.js"></script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <main>
+    <section class="section" id="inicio">
+      <h1>Sobre Mim</h1>
+      <img src="https://avatars.githubusercontent.com/u/169060996?s=400&u=60b4809998126d5a22c843c47396eaacd9b326a9&v=4" alt="Minha Foto" height="200" class="perfil_index">
+      <p id="idade">Tenho</p>
+      <p>🌱 Atualmente estou aprendendo:</p>
+      <img src="https://cdn.worldvectorlogo.com/logos/react-native-1.svg" width="100" class="Linguagens" />
+
+      <p>Já possuo Domínio sobre:</p>
+         <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/768px-HTML5_logo_and_wordmark.svg.png" width="65" height="65"/>
+         <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" width="55" height="65"/>
+         <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="65" height="65"/>
+         <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" width="65" height="65"/>
+         <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" width="140" height="65"/>
+         <img loading="lazy" src="https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-icone-da-linguagem-de-programacao-java.png" width="80" height="70"/>
+        <p>Utilizo os frameorks:</p>
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" width="100" height="70"/>
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width="150" height="70"/>
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" width="80" height="70"/>
+        <img loading="lazy" src="https://media.licdn.com/dms/image/v2/D4D12AQEZVXWqTQ0fTg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1689632891005?e=2147483647&v=beta&t=U2C7v9Ln_agpV2td-ceFC44JMURVoOoNxLZo_sGYMjM" width="100" height="70"/>
+        <h1>Redes Sociais</h1>
+        <a href="https://www.instagram.com/matewx_j" target="_blank">
+          <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" class="contact">
+        </a>
+        <a href="https://www.linkedin.com/in/mateus-juan-09b9b2298" target="_blank">
+          <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" class="contact">
+        </a>
+    </section>
+
+    <section class="section" id="experiencias">
+<h1>Experiências</h1>
+<p>
+  O Sistema de Gerenciamento de Clube de Desbravadores é um site no qual estou trabalhando há algum tempo, com o objetivo de concluir a especialidade 'Informática Programável' no Clube de Desbravadores. Um dos requisitos dessa especialidade é criar um site de gerenciamento para o clube.
+  <br><br>
+  Nesse projeto, utilizei o framework Flask para o desenvolvimento backend, hospedei o site na plataforma <a href="https://render.com/">Render</a> e utilizei o <a href="https://supabase.com/">Supabase</a> para construir e hospedar o banco de dados.
+</p>
+<a href="https://github.com/MateusJuan/SGGF">Repositório do GitHub</a> | 
+<a href="https://sggf.onrender.com/login">Link do Site já Hospedado</a>
+
+
+    </section>
+
+    <section class="section" id="certificados">
+      <h1>GitHub</h1>
+      <div class="github-stats">
+        <a href="https://github-readme-stats.vercel.app/api/top-langs/?username=MateusJuan&layout=compact&langs_count=7&theme=transparent">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MateusJuan&layout=compact&langs_count=7&theme=transparent" height="180">
+        </a>
+        <a href="https://github-readme-stats.vercel.app/api?username=MateusJuan&show_icons=true&theme=transparent&include_all_commits=true&count_private=true">
+          <img src="https://github-readme-stats.vercel.app/api?username=MateusJuan&show_icons=true&theme=transparent&include_all_commits=true&count_private=true" height="180">
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h1>Certificados</h1>
+      <p>Curso de Redes de Computadores - <a href="https://www.netacad.com/" class="link" target="_blank">CISCO</a></p>
+      <iframe src="MateusJuan Higino dos -Essencial de Red-certificate.pdf" height="500px"></iframe>
+
+      <p>Curso de Python - Projeto e Prática 2 (PP2)</p>
+      <iframe src="certificado-python.pdf" height="500px"></iframe>
+    </section>
+  </main>
+  <script src="idade.js"></script>
 </body>
 </html>

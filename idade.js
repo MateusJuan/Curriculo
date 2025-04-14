@@ -1,4 +1,3 @@
-// Função para calcular a idade
 function calcularIdade(dataNascimento) {
   var hoje = new Date();
   var nascimento = new Date(dataNascimento);
@@ -10,16 +9,36 @@ function calcularIdade(dataNascimento) {
   return idade;
 }
 
-// Função para atualizar a idade a cada ano
 function atualizarIdade() {
-  var dataNascimento = "2008-01-24"; // Data de nascimento no formato "YYYY-MM-DD"
+  var dataNascimento = "2008-01-24";
   var idade = calcularIdade(dataNascimento);
-  /*document.getElementById("idade").textContent = idade + " anos";*/
-  document.getElementById("idade").textContent = "👋🏽 Olá, Me chamo Mateus Juan, tenho " + idade + " anos";
+  document.getElementById("idade").textContent = "👋Olá, Me chamo Mateus Juan, tenho " + idade + " anos";
 }
 
-// Chamada inicial para definir a idade ao carregar a página
 atualizarIdade();
+setInterval(atualizarIdade, 1000 * 60 * 60 * 24 * 365);
 
-// Atualizar a idade a cada ano
-setInterval(atualizarIdade, 1000 * 60 * 60 * 24 * 365); //1 vez por ano
+function scrollToSection(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 800;
+    let startTime = null;
+
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      const easing = progress < 0.5 ? 4 * progress * progress * progress : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+      window.scrollTo(0, startPosition + distance * easing);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    requestAnimationFrame(animation);
+  }
+}
+
+document.getElementById("typing-name").textContent = "Mateus Juan";
