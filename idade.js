@@ -12,7 +12,7 @@ function calcularIdade(dataNascimento) {
 function atualizarIdade() {
   var dataNascimento = "2008-01-24";
   var idade = calcularIdade(dataNascimento);
-  document.getElementById("idade").textContent = "👋Olá, Me chamo Mateus Juan, tenho " + idade + " anos";
+  document.getElementById("idade").textContent = "Oi, Me chamo Mateus Juan, tenho " + idade + " anos";
 }
 
 atualizarIdade();
