@@ -6,74 +6,76 @@
   <title>Mateus Juan | Portfólio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="perfil_index">
-          <img src="https://avatars.githubusercontent.com/u/169060996?s=400&u=60b4809998126d5a22c843c47396eaacd9b326a9&v=4" alt="Perfil" height="50" width="50">
-          <span class="typing-name" id="typing-name"></span>
-        </div>
-        <nav>
-          <button onclick="scrollToSection('inicio')">
-            <span class="material-symbols-outlined">home</span>Início
-          </button>
-          <button onclick="scrollToSection('experiencias')">
-            <span class="material-symbols-outlined">history_edu</span>Experiências
-          </button>
-          <button onclick="scrollToSection('certificados')">
-            <span class="material-symbols-outlined">workspace_premium</span>Certificados
-          </button>
-        </nav>
-      </header>
+  <!-- Header com Bootstrap -->
+  <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center">
+        <img src="https://avatars.githubusercontent.com/u/169060996?s=400&u=60b4809998126d5a22c843c47396eaacd9b326a9&v=4" alt="Perfil" width="50" height="50" class="me-2 rounded-circle">
+        <span class="typing-name" id="typing-name"></span>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio"><span class="material-symbols-outlined">home</span> Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiencias"><span class="material-symbols-outlined">history_edu</span> Experiências</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificados"><span class="material-symbols-outlined">workspace_premium</span> Certificados</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
-  <main>
+  <!-- Conteúdo -->
+  <main class="container py-5">
+    <!-- Início -->
     <section class="section" id="inicio">
       <h1>Sobre Mim</h1>
-      <img src="https://avatars.githubusercontent.com/u/169060996?s=400&u=60b4809998126d5a22c843c47396eaacd9b326a9&v=4" alt="Minha Foto" height="200" class="perfil_index">
-      <p id="idade">Tenho</p>
-      <p>Atualmente estou Estudando:</p>
-      <img src="https://cdn.worldvectorlogo.com/logos/react-native-1.svg" width="100" class="Linguagens" />
+      <div class="text-center mb-4">
+        <img src="https://avatars.githubusercontent.com/u/169060996?s=400&u=60b4809998126d5a22c843c47396eaacd9b326a9&v=4" alt="Minha Foto" width="200" class="rounded-circle mb-3">
+      </div>
+      <p id="idade"></p>
+      <p>Atualmente estou estudando:</p>
+      <img src="https://cdn.worldvectorlogo.com/logos/react-native-1.svg" width="100" class="m-2" />
 
-      <p>Já possuo Domínio sobre:</p>
-         <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/768px-HTML5_logo_and_wordmark.svg.png" width="65" height="65"/>
-         <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" width="55" height="65"/>
-         <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="65" height="65"/>
-         <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" width="65" height="65"/>
-         <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" width="140" height="65"/>
-         <img loading="lazy" src="https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-icone-da-linguagem-de-programacao-java.png" width="80" height="70"/>
-        <p>Utilizo os frameorks:</p>
-        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" width="100" height="70"/>
-        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width="150" height="70"/>
-        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" width="80" height="70"/>
-        <img loading="lazy" src="https://media.licdn.com/dms/image/v2/D4D12AQEZVXWqTQ0fTg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1689632891005?e=2147483647&v=beta&t=U2C7v9Ln_agpV2td-ceFC44JMURVoOoNxLZo_sGYMjM" width="100" height="70"/>
-        <h1>Redes Sociais</h1>
-        <a href="https://www.instagram.com/matewx_j" target="_blank">
-          <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" class="contact">
-        </a>
-        <a href="https://www.linkedin.com/in/mateus-juan-09b9b2298" target="_blank">
-          <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" class="contact">
-        </a>
+      <p>Já possuo domínio sobre:</p>
+      <div class="d-flex flex-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="65" class="m-2"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="55" class="m-2"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="65" class="m-2"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="65" class="m-2"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" width="120" class="m-2"/>
+        <img src="https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-icone-da-linguagem-de-programacao-java.png" width="70" class="m-2"/>
+      </div>
+      <p>Utilizo frameworks:</p>
+      <div class="d-flex flex-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width="100" class="m-2"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width="150" class="m-2"/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" width="80" class="m-2"/>
+        <img src="https://media.licdn.com/dms/image/v2/D4D12AQEZVXWqTQ0fTg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1689632891005?e=2147483647&v=beta&t=U2C7v9Ln_agpV2td-ceFC44JMURVoOoNxLZo_sGYMjM" width="100" class="m-2"/>
+      </div>
     </section>
 
+    <!-- Experiências -->
     <section class="section" id="experiencias">
-<h1>Experiências</h1>
-<p>
-  O <strong>Sistema de Gerenciamento de Clube de Desbravadores</strong> é um site no qual estou trabalhando há algum tempo, com o objetivo de concluir a especialidade 'Informática Programável' no Clube de Desbravadores. Um dos requisitos dessa especialidade é criar um site de gerenciamento para o clube.
-  <br><br>
-  Nesse projeto, utilizei o framework Flask para o desenvolvimento backend, hospedei o site na plataforma <a href="https://render.com/">Render</a> e utilizei o <a href="https://supabase.com/">Supabase</a> para construir e hospedar o banco de dados.
-</p>
-<a href="https://github.com/MateusJuan/SGGF">Repositório do GitHub</a> |
-<a href="https://sggf.onrender.com/login">Link do Site já Hospedado</a>
-<br><br>
-<!--<hr>-->
-
-
+      <h1>Experiências</h1>
+      <p>
+        O <strong>Sistema de Gerenciamento de Clube de Desbravadores</strong> é um site no qual estou trabalhando há algum tempo, com o objetivo de concluir a especialidade 'Informática Programável'.
+        Nesse projeto, utilizei <b>Flask</b> no backend, hospedei no <a href="https://render.com/">Render</a> e usei o <a href="https://supabase.com/">Supabase</a> como banco de dados.
+      </p>
+      <a href="https://github.com/MateusJuan/SGGF" class="btn btn-outline-info btn-sm me-2">Repositório GitHub</a>
+      <a href="https://sggf.onrender.com/login" class="btn btn-outline-light btn-sm">Ver Site</a>
     </section>
 
-    <section class="section" id="certificados">
+    <!-- GitHub -->
+    <section class="section" id="github">
       <h1>GitHub</h1>
-      <div class="github-stats">
+      <div class="d-flex flex-wrap justify-content-center gap-3">
         <a href="https://github-readme-stats.vercel.app/api/top-langs/?username=MateusJuan&layout=compact&langs_count=7&theme=transparent">
           <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MateusJuan&layout=compact&langs_count=7&theme=transparent" height="180">
         </a>
@@ -83,19 +85,24 @@
       </div>
     </section>
 
-    <section class="section">
+    <!-- Certificados -->
+    <section class="section" id="certificados">
       <h1>Certificados</h1>
-      <p>Curso de Redes de Computadores - <a href="https://www.netacad.com/" class="link" target="_blank">CISCO</a></p>
-      <iframe src="MateusJuan Higino dos -Essencial de Red-certificate.pdf" height="500px"></iframe>
+      
+      <p>Curso de Redes de Computadores - <a href="https://www.netacad.com/" target="_blank" class="text-info">CISCO</a></p>
+      <iframe src="MateusJuan Higino dos -Essencial de Red-certificate.pdf" height="400"></iframe>
 
-      <p>Curso de Python - Projeto e Prática 2 (PP2) - <a href="https://www.netacad.com/" class="link" target="_blank">CISCO</a></p>
-      <iframe src="certificado-python.pdf" height="500px"></iframe>
+      <p class="mt-4">Curso de Python - Projeto e Prática 2 (PP2) - <a href="https://www.netacad.com/" target="_blank" class="text-info">CISCO</a></p>
+      <iframe src="certificado-python.pdf" height="400"></iframe>
 
-      <p>Certificados de Participação em Workshops na 21°SNCT(Semana Nacional de Ciência e Tecnologia) do IFPE</p>
-      <iframe src="./Certificados SNCT21.pdf" height="500px"></iframe>
+      <p class="mt-4">Certificados de Participação em Workshops na 21°SNCT (Semana Nacional de Ciência e Tecnologia) do IFPE</p>
+      <iframe src="Certificados SNCT21.pdf" height="400"></iframe>
     </section>
   </main>
-  <script src="idade.js"></script>
-</body>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="./idade.js"></script>
+</body>
 </html>
