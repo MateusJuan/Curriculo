@@ -1,0 +1,23 @@
+import { Header } from "@/components/portfolio/header"
+import { HeroSection } from "@/components/portfolio/hero-section"
+import { SkillsSection } from "@/components/portfolio/skills-section"
+import { ExperienceSection } from "@/components/portfolio/experience-section"
+import { GithubSection } from "@/components/portfolio/github-section"
+import { CertificatesSection } from "@/components/portfolio/certificates-section"
+import { Footer } from "@/components/portfolio/footer"
+
+export default function PortfolioPage() {
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <HeroSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <GithubSection />
+        <CertificatesSection />
+      </main>
+      <Footer />
+    </div>
+  )
+}
