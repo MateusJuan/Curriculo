@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils"
 const navItems = [
   { label: "Início", href: "#inicio", icon: Home },
   { label: "Experiências", href: "#experiencias", icon: Briefcase },
-  { label: "Certificados", href: "#certificados", icon: Award },
   { label: "GitHub", href: "#github", icon: Github },
+  { label: "Certificados", href: "#certificados", icon: Award },
 ]
 
 export function Header() {
