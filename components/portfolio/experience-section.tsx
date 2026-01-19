@@ -17,6 +17,7 @@ const projects = [
       live: "https://escalas-web.vercel.app/"
     },
     status: "Em desenvolvimento",
+    contributors: [],
     highlights: [
       "Backend hospedado no Render",
       "Banco de dados Supabase",
@@ -38,6 +39,7 @@ const projects = [
       live: "/"
     },
     status: "Concluído",
+    contributors: [],
     highlights: [
       "Design responsivo",
       "Animações suaves",
@@ -59,6 +61,18 @@ const projects = [
       live: null
     },
     status: "Concluído",
+    contributors: [
+      {
+        name: "Eliel Peixoto",
+        role: "Desenvolvedor Frontend",
+        github: "https://github.com/eliel-peixoto",
+      },
+      {
+      name: "Efraim Negreiros",
+      role: "Desenvolvedor Backend",
+      github: "https://github.com/efraimjnegreiros",
+      }
+    ],
     highlights: [
       "Backend hospedado no Render",
       "Banco de dados Supabase",
@@ -157,7 +171,6 @@ export function ExperienceSection() {
                     </div>
                   ))}
                 </div>
-
                 {/* Highlights */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {project.highlights.map((highlight, i) => (
@@ -170,6 +183,34 @@ export function ExperienceSection() {
                     </div>
                   ))}
                 </div>
+                {/* Contributors */}
+                {project.contributors && project.contributors.length > 0 && (
+                  <div className="mt-6">
+                    <h4 className="text-sm font-semibold text-foreground mb-3">
+                      Contribuidores
+                    </h4>
+
+                    <div className="flex flex-wrap gap-3">
+                      {project.contributors.map((person, i) => (
+                        <a
+                          key={i}
+                          href={person.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-3 py-2 bg-secondary/50 rounded-lg hover:bg-secondary transition-colors"
+                        >
+                          <Github className="w-4 h-4 text-primary" />
+                          <div className="flex flex-col leading-tight">
+                            <span className="text-sm font-medium">{person.name}</span>
+                            <span className="text-xs text-muted-foreground">
+                              {person.role}
+                            </span>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
