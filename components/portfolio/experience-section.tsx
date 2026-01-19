@@ -80,7 +80,30 @@ const projects = [
       "Testado por usuários reais",
     ],
   },
-  
+  {
+    title: "Quiz online de Biologia",
+    description:
+      "Projeto de quiz interativo desenvolvido para um trabalho escolar de biologia, focado em testar conhecimentos sobre a origem da vida por meio de perguntas de múltipla escolha. O quiz foi feito com criatividade e interface simples para engajar os usuários enquanto revisam conceitos importantes do currículo de biologia.",
+    technologies: [
+      { name: "Node.js", icon: Server },
+      { name: "Express.js", icon: Globe },
+      { name: "EJS", icon: Globe },
+      { name: "JavaScript", icon: Globe },
+      { name: "HTML & CSS", icon: Globe },
+    ],
+    links: {
+      github: "https://github.com/MateusJuan/Trabalho-de-Biologia-Quiz",
+      live: "https://trabalho-de-biologia-quiz.vercel.app/"
+    },
+    status: "Concluído",
+    contributors: [],
+    highlights: [
+      "Perguntas de múltipla escolha sobre temas de biologia",
+      "Interface web interativa",
+      "Feito especificamente para trabalho escolar",
+      "Foco em criatividade e usabilidade",
+    ],
+  },
 ]
 
 export function ExperienceSection() {
