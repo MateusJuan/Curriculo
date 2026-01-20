@@ -1,8 +1,14 @@
 "use client"
 
+type HeaderProps = {
+  locale: "pt" | "en"
+}
+
 import { useState, useEffect } from "react"
 import { Menu, X, Home, Briefcase, Award, Github } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useRouter, usePathname } from "next/navigation"
+import Image from "next/image"
 
 const navItems = [
   { label: "Início", href: "#inicio", icon: Home },
@@ -11,32 +17,49 @@ const navItems = [
   { label: "Certificados", href: "#certificados", icon: Award },
 ]
 
-export function Header() {
+const languages = [
+  { code: "pt", label: "Português", flag: "/flags/br.png" },
+  { code: "en", label: "English", flag: "/flags/us.png" },
+]
+
+export function Header({ locale }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [typedText, setTypedText] = useState("")
+  const [langOpen, setLangOpen] = useState(false)
+
   const fullName = "Mateus Juan"
 
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const currentLang: "pt" | "en" = locale ?? "pt"
+  /* ================= SCROLL ================= */
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
+    const handleScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  /* ================= TYPING ================= */
   useEffect(() => {
-    let index = 0
+    let i = 0
     const timer = setInterval(() => {
-      if (index <= fullName.length) {
-        setTypedText(fullName.slice(0, index))
-        index++
+      if (i <= fullName.length) {
+        setTypedText(fullName.slice(0, i))
+        i++
       } else {
         clearInterval(timer)
       }
     }, 100)
     return () => clearInterval(timer)
   }, [])
+
+  const changeLanguage = (lang: "pt" | "en") => {
+    const segments = pathname.split("/")
+    segments[1] = lang
+    router.push(segments.join("/"))
+  }
 
   return (
     <header
@@ -47,31 +70,31 @@ export function Header() {
           : "bg-transparent"
       )}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo and Name */}
-          <div className="flex items-center gap-3">
-            <div className="relative">
-              <img
-                src="https://avatars.githubusercontent.com/u/169060996?s=400&u=60b4809998126d5a22c843c47396eaacd9b326a9&v=4"
-                alt="Mateus Juan"
-                className="w-10 h-10 rounded-full ring-2 ring-primary/50"
-              />
-              <div className="absolute inset-0 rounded-full bg-primary/20 animate-pulse" />
-            </div>
-            <span className="text-lg font-semibold text-foreground">
-              {typedText}
-              <span className="animate-pulse text-primary">|</span>
-            </span>
-          </div>
+      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
-            {navItems.map((item) => (
+        {/* LOGO */}
+        <div className="flex items-center gap-3">
+          <Image
+            src="https://avatars.githubusercontent.com/u/169060996"
+            alt="Mateus Juan"
+            width={40}
+            height={40}
+            className="rounded-full ring-2 ring-primary/50"
+          />
+          <span className="text-lg font-semibold">
+            {typedText}
+            <span className="text-primary animate-pulse">|</span>
+          </span>
+        </div>
+
+        {/* DESKTOP NAV */}
+        <div className="hidden md:flex items-center gap-4">
+          <nav className="flex gap-1">
+            {navItems.map(item => (
               <a
                 key={item.href}
                 href={item.href}
-                className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-primary transition-colors rounded-lg hover:bg-secondary/50"
+                className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-primary rounded-lg hover:bg-secondary/50"
               >
                 <item.icon className="w-4 h-4" />
                 {item.label}
@@ -79,34 +102,61 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-muted-foreground hover:text-primary transition-colors"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-      </div>
+          {/* LANGUAGE SWITCH */}
+          <div className="relative">
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-secondary/50"
+            >
+              <Image
+                src={
+                  currentLang === "pt"
+                    ? "/flags/br.png"
+                    : "/flags/us.png"
+                }
+                alt="Idioma"
+                width={20}
+                height={14}
+              />
+              <span className="text-sm">{currentLang.toUpperCase()}</span>
+            </button>
 
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border">
-          <nav className="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-2">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-3 px-4 py-3 text-muted-foreground hover:text-primary transition-colors rounded-lg hover:bg-secondary/50"
-              >
-                <item.icon className="w-5 h-5" />
-                {item.label}
-              </a>
-            ))}
-          </nav>
+            {langOpen && (
+              <div className="absolute right-0 mt-2 w-40 bg-background border rounded-lg shadow-lg overflow-hidden">
+                {languages.map(lang => (
+                  <button
+                    key={lang.code}
+                    onClick={() => {
+                      changeLanguage(lang.code as "pt" | "en")
+                      setLangOpen(false)
+                    }}
+                    className={cn(
+                      "flex items-center gap-3 w-full px-4 py-2 text-sm hover:bg-secondary",
+                      currentLang === lang.code && "bg-secondary"
+                    )}
+                  >
+                    <Image
+                      src={lang.flag}
+                      alt={lang.label}
+                      width={20}
+                      height={14}
+                    />
+                    {lang.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
-      )}
+
+        {/* MOBILE */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden"
+        >
+          {isOpen ? <X /> : <Menu />}
+        </button>
+      </div>
     </header>
   )
 }
