@@ -44,30 +44,30 @@ export function HeroSection() {
 
         {/* Nome */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-          <span className="text-foreground">{t.apresentacao}</span>{" "}
-          <span className="gradient-text glow-text">{t.nome}</span>
+          <span className="text-foreground">{t.hero_section.apresentacao}</span>{" "}
+          <span className="gradient-text glow-text">{t.hero_section.nome}</span>
         </h1>
 
         <p className="text-xl text-muted-foreground mb-6">
-          {t.cargo}
+          {t.hero_section.cargo}
         </p>
 
         <div className="flex justify-center gap-2 text-muted-foreground mb-8">
           <MapPin className="w-4 h-4 text-primary" />
           <span>
-            {age} {t.anos} • {t.pais}
+            {age} {t.hero_section.anos} • {t.hero_section.pais}
           </span>
         </div>
 
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12">
-          {t.bio}
+          {t.hero_section.bio}
         </p>
 
         <a
           href="#experiencias"
           className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full hover:scale-105 transition"
         >
-          {t.cta}
+          {t.hero_section.cta}
           <ArrowDown className="w-4 h-4 animate-bounce" />
         </a>
       </div>

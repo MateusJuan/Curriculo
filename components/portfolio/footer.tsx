@@ -1,6 +1,8 @@
 "use client"
 
 import { Github, Linkedin, Mail, Heart } from "lucide-react"
+import { useTranslation } from "@/hooks/useTranslation"
+
 
 const socialLinks = [
   {
@@ -22,6 +24,7 @@ const socialLinks = [
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
+  const { t, lang } = useTranslation()
 
   return (
     <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-border">
@@ -31,7 +34,7 @@ export function Footer() {
           <div className="flex flex-col items-center md:items-start gap-2">
             <span className="text-lg font-semibold gradient-text">Mateus Juan</span>
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Todos os direitos reservados.
+              © {currentYear} {t.direitos}
             </p>
           </div>
 
@@ -53,9 +56,9 @@ export function Footer() {
 
           {/* Made with */}
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Feito com</span>
+            <span>{t["Feitos com"]}</span>
             <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-            <span>e muita paciência</span>
+            <span>{t["e muita paciencia."]}</span>
           </div>
         </div>
       </div>

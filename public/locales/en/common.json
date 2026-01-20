@@ -1,13 +1,99 @@
 {
-  "apresentacao": "Hi, I'm",
-  "nome": "Mateus Juan",
-  "cargo": "Full Stack Developer",
-  "anos": "years old",
-  "pais": "Brazil",
-  "bio": "A developer passionate about creating amazing digital experiences. Currently focused on mobile development with React Native and backend development with Node.js.",
-  "cta": "See my projects",
-  "inicio": "Home",
-  "experiencias": "Experiences",
-  "github": "GitHub",
-  "certificados": "Certificates"
+
+  "header":{
+    "inicio": "Home",
+    "experiencias": "Experiences",
+    "github": "GitHub",
+    "certificados": "Certificates"
+  },
+
+  "hero_section":{
+    "apresentacao": "Hi, I'm",
+    "nome": "Mateus Juan",
+    "cargo": "Full Stack Developer",
+    "anos": "years old",
+    "pais": "Brazil",
+    "bio": "A developer passionate about creating amazing digital experiences. Currently focused on mobile development with React Native and backend development with Node.js.",
+    "cta": "See my projects"
+  },
+  
+  "skils":{
+    "Estudando": "Currently studying",
+    "Linguagens": "Languages",
+    "Frameworks_Ferramentas": "Frameworks & Tools"
+  },
+
+  "expeciencias": {
+    "titulo": "Experience",
+    "descricao": "Projects I developed to improve my skills and create real-world solutions.",
+    "ver": "View Site",
+    "Contribuidores": "Contributors",
+
+    "Escalas": {
+      "titulo": "Scaling System",
+      "descricao": "Mobile application (iOS and Android) and WEB application that facilitates communication and organization of church events and services. An independently developed project focused on gaining in-depth experience in Frontend and Backend development.",
+      "status": "In development",
+      "highlights": [
+        "Backend hosted on Render",
+        "PostgreSQL database on Supabase",
+        "JWT authentication",
+        "Administrative panel for user and event management",
+        "Responsive and intuitive design",
+        "Tested by real users"
+      ]
+    },
+
+    "Portifólio Pessoal": {
+      "titulo": "Personal Portfolio",
+      "descricao": "My personal website developed with Next.js and Tailwind CSS to showcase my skills, projects, and experiences as a Full Stack Developer.",
+      "status": "Completed",
+      "highlights": [
+        "Built with Next.js and Tailwind CSS",
+        "Responsive design for mobile and desktop devices",
+        "Interactive sections to highlight skills and projects",
+        "SEO and performance optimized",
+        "Smooth animations for a better user experience"
+      ]
+    },
+
+    "App de vendas de E-commerce": {
+      "titulo": "E-commerce Sales App",
+      "descricao": "School project of a mobile e-commerce application developed with React Native, allowing users to browse products, add items to the cart, and complete purchases intuitively.",
+      "status": "Completed",
+      "highlights": [
+        "Developed with React Native",
+        "Integration with RESTful API for product and order management",
+        "User authentication",
+        "Intuitive and user-friendly design"
+      ],
+      "Eliel": "Frontend Developer",
+      "Efraim": "Backend Developer"
+    },
+
+    "Quiz online de Biologia": {
+      "titulo": "Online Biology Quiz",
+      "descricao": "School project of an online quiz developed with HTML, CSS, and JavaScript, focused on biology questions to help students test their knowledge interactively.",
+      "status": "Completed",
+      "highlights": [
+        "Developed with HTML, CSS, and JavaScript",
+        "Friendly and interactive interface",
+        "Immediate feedback on correct and incorrect answers",
+        "Scoring system to motivate users",
+        "Focus on creativity and usability"
+      ]
+    }
+  },
+  "Github":{
+    "estatisticas": "My statistics and contributions on GitHub",
+    "perfil": "View Full Profile"
+  },
+
+  "certificados": "Certificates",
+  "cert_descrcao": "Certifications and achievements throughout my journey.",
+
+  "direitos": "All rights reserved.",
+  "Feitos com": "Made with",
+  "e muita paciencia.": "and lots of patience."
+
+
 }

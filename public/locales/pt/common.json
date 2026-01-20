@@ -1,13 +1,95 @@
 {
-  "apresentacao": "Olá, sou",
-  "nome": "Mateus Juan",
-  "cargo": "Desenvolvedor Full Stack",
-  "anos": "anos",
-  "pais": "Brasil",
-  "bio": "Desenvolvedor apaixonado por criar experiências digitais incríveis. Atualmente focado em desenvolvimento mobile com React Native e backend com Node.js.",
-  "cta": "Ver meus projetos",
-  "inicio": "Início",
-  "experiencias": "Experiências",
-  "github": "GitHub",
-  "certificados": "Certificados"
+
+  "header":{
+    "inicio": "Início",
+    "experiencias": "Experiências",
+    "github": "GitHub",
+    "certificados": "Certificados"
+  },
+
+  "hero_section":{
+    "apresentacao": "Olá, sou",
+    "nome": "Mateus Juan",
+    "cargo": "Desenvolvedor Full Stack",
+    "anos": "anos",
+    "pais": "Brasil",
+    "bio": "Desenvolvedor apaixonado por criar experiências digitais incríveis. Atualmente focado em desenvolvimento mobile com React Native e backend com Node.js.",
+    "cta": "Veja meus projetos"
+  },
+
+  "skils":{
+    "Estudando": "Atualmente estudando",
+    "Linguagens": "Linguagens",
+    "Frameworks_Ferramentas": "Frameworks & Ferramentas"
+  },
+
+  "expeciencias":{
+    "titulo": "Experiências",
+    "descricao": " Projetos que desenvolvi para aprimorar minhas habilidades e criar soluções reais.",
+    "ver": "Ver Site",
+    "Contribuidores": "Contribuidores",
+    "Escalas":{
+      "titulo": "Sistema de Escalas",
+      "descricao": "Aplicativo para dispositivos móveis (iOS e Android) e aplicação WEB que facilita a comunicação e organização de eventos e cultos para membros da igreja. Projeto desenvolvido de forma independente para criar experiências aprofundadas em desenvolvimento FrontEnd e BackEnd.",
+      "status": "Em desenvolvimento",
+      "highlights": [
+        "Backend hospedado no Render",
+        "Banco de dados PostgreSQL no Supabase",
+        "Autenticação com JWT",
+        "Painel administrativo para gerenciamento de usuários e eventos",
+        "Design responsivo e intuitivo",
+        "Testado por usuários reais"
+      ]
+    },
+    "Portifólio Pessoal":{
+      "titulo": "Portfólio Pessoal",
+      "descricao": "Meu site pessoal desenvolvido com Next.js e Tailwind CSS para apresentar minhas habilidades, projetos e experiências como desenvolvedor Full Stack.",
+      "status": "Concluído",
+      "highlights": [
+        "Desenvolvido com Next.js e Tailwind CSS",
+        "Design responsivo para dispositivos móveis e desktop",
+        "Seções interativas para destacar habilidades e projetos",
+        "Otimizado para SEO e desempenho",
+        "Implementação de animações suaves para melhor experiência do usuário"
+      ]
+    },
+    "App de vendas de E-commerce":{
+      "titulo": "App de vendas de E-commerce",
+      "descricao": "Trabalho escolar de um aplicativo móvel para e-commerce desenvolvido com React Native, permitindo aos usuários navegar por produtos, adicionar itens ao carrinho e finalizar compras de forma intuitiva.",
+      "status": "Concluído",
+      "highlights": [
+        "Desenvolvido com React Native",
+        "Integração com API RESTful para gerenciamento de produtos e pedidos",
+        "Autenticação de usuários",
+        "Design intuitivo e fácil de usar"
+      ],
+      "Eliel": "Desenvolvedor Frontend",
+      "Efraim": "Desenvolvedor Backend"
+    },
+    "Quiz online de Biologia":{
+      "titulo": "Quiz online de Biologia",
+      "descricao": "Projeto escolar de um quiz online desenvolvido com HTML, CSS e JavaScript, focado em perguntas sobre biologia para ajudar os alunos a testarem seus conhecimentos de forma interativa.",
+      "status": "Concluído",
+      "highlights": [
+        "Desenvolvido com HTML, CSS e JavaScript",
+        "Interface amigável e interativa",
+        "Feedback imediato sobre respostas corretas e incorretas",
+        "Sistema de pontuação para motivar os usuários",
+        "Foco em criatividade e usabilidade"
+      ]
+    }
+  },
+  "Github":{
+    "estatisticas":"Minhas estatísticas e contribuições no GitHub",
+    "perfil":"Ver perfil Completo"
+  },
+
+
+  "certificados": "Certificados",
+  "cert_descrcao": "Certificações e conquistas ao longo da minha jornada",
+
+  "direitos": "Todos os direitos reservados.",
+  "Feitos com": "Feito com",
+  "e muita paciencia.": "e muita paciência."
+
 }

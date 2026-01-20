@@ -1,6 +1,8 @@
 "use client"
 
 import { Code2, Layers, Sparkles } from "lucide-react"
+import { useTranslation } from "@/hooks/useTranslation"
+
 
 const currentlyLearning = [
   { name: "Kotlin", icon: "https://mmcgbl.com/wp-content/uploads/2025/03/img-49.webp" },
@@ -28,6 +30,7 @@ const frameworks = [
 ]
 
 function SkillCard({ name, icon }: { name: string; icon: string }) {
+
   return (
     <div className="group relative flex flex-col items-center justify-center p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/10">
       <img
@@ -43,6 +46,9 @@ function SkillCard({ name, icon }: { name: string; icon: string }) {
 }
 
 export function SkillsSection() {
+
+  const { t, lang } = useTranslation()
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -52,7 +58,7 @@ export function SkillsSection() {
             <div className="p-2 bg-primary/10 rounded-lg">
               <Sparkles className="w-5 h-5 text-primary" />
             </div>
-            <h2 className="text-2xl font-bold text-foreground">Atualmente estudando</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t.skils.Estudando}</h2>
           </div>
           <div className="flex flex-wrap gap-4">
             {currentlyLearning.map((skill) => (
@@ -73,7 +79,7 @@ export function SkillsSection() {
             <div className="p-2 bg-primary/10 rounded-lg">
               <Code2 className="w-5 h-5 text-primary" />
             </div>
-            <h2 className="text-2xl font-bold text-foreground">Linguagens</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t.skils.Linguagens}</h2>
           </div>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
             {skills.map((skill) => (
@@ -88,7 +94,7 @@ export function SkillsSection() {
             <div className="p-2 bg-primary/10 rounded-lg">
               <Layers className="w-5 h-5 text-primary" />
             </div>
-            <h2 className="text-2xl font-bold text-foreground">Frameworks & Ferramentas</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t.skils.Frameworks_Ferramentas}</h2>
           </div>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
             {frameworks.map((framework) => (

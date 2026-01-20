@@ -2,6 +2,7 @@
 
 import { Award, ExternalLink } from "lucide-react"
 import Image from "next/image"
+import { useTranslation } from "@/hooks/useTranslation"
 
 const certificates = [
   {
@@ -56,6 +57,8 @@ const certificates = [
 ]
 
 export function CertificatesSection() {
+  const { t, lang } = useTranslation()
+
   return (
     <section id="certificados" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
       <div className="max-w-6xl mx-auto">
@@ -67,10 +70,10 @@ export function CertificatesSection() {
             </div>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            <span className="gradient-text">Certificados</span>
+            <span className="gradient-text">{t.certificados}</span>
           </h2>
           <p className="text-muted-foreground">
-            Certificações e conquistas ao longo da minha jornada
+            {t.cert_descrcao}
           </p>
         </div>
 

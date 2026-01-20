@@ -2,11 +2,16 @@
 
 import { ExternalLink, Github, Smartphone, Globe, Server } from "lucide-react"
 
-const projects = [
+import { useTranslation } from "@/hooks/useTranslation"
+
+export function ExperienceSection() {
+  const { t, lang } = useTranslation()
+
+  const projects = [
   {
-    title: "Sistema de Escalas",
+    title: t.expeciencias.Escalas.titulo,
     description:
-      "Aplicativo para dispositivos móveis (iOS e Android) e aplicação WEB que facilita a comunicação e organização de eventos e cultos para membros da igreja. Projeto desenvolvido de forma independente para criar experiências aprofundadas em desenvolvimento FrontEnd e BackEnd.",
+      t.expeciencias.Escalas.descricao,
     technologies: [
       { name: "React Native", icon: Smartphone },
       { name: "Node.js", icon: Globe },
@@ -16,19 +21,21 @@ const projects = [
       github: "https://github.com/MateusJuan/EscalasIASD",
       live: "https://escalas-web.vercel.app/"
     },
-    status: "Em desenvolvimento",
+    status: t.expeciencias.Escalas.status,
     contributors: [],
     highlights: [
-      "Backend hospedado no Render",
-      "Banco de dados Supabase",
-      "Builds via EAS",
-      "Testado por usuários reais",
+      t.expeciencias.Escalas.highlights[0],
+      t.expeciencias.Escalas.highlights[1],
+      t.expeciencias.Escalas.highlights[2],
+      t.expeciencias.Escalas.highlights[3],
+      t.expeciencias.Escalas.highlights[4],
+      t.expeciencias.Escalas.highlights[5],
     ],
   },
   {
-    title: "Portfolio Pessoal",
+    title: t.expeciencias["Portifólio Pessoal"].titulo,
     description:
-      "Meu site pessoal desenvolvido com Next.js e Tailwind CSS para apresentar minhas habilidades, projetos e experiências de forma profissional e atraente.",
+      t.expeciencias["Portifólio Pessoal"].descricao,
     technologies: [
       { name: "Next.js", icon: Globe },
       { name: "Tailwind CSS", icon: Globe },
@@ -38,19 +45,20 @@ const projects = [
       github:"https://github.com/MateusJuan/curriculo",
       live: "/"
     },
-    status: "Concluído",
+    status: t.expeciencias["Portifólio Pessoal"].status,
     contributors: [],
     highlights: [
-      "Design responsivo",
-      "Animações suaves",
-      "Otimização para SEO",
-      "Implementação de seção de blog",
+      t.expeciencias["Portifólio Pessoal"].highlights[0],
+      t.expeciencias["Portifólio Pessoal"].highlights[1],
+      t.expeciencias["Portifólio Pessoal"].highlights[2],
+      t.expeciencias["Portifólio Pessoal"].highlights[3],
+      t.expeciencias["Portifólio Pessoal"].highlights[4],
     ],
   },
   {
-    title: "App de vendas de E-commerce",
+    title: t.expeciencias["App de vendas de E-commerce"].titulo,
     description:
-      "Trabalho escolar de um aplicativo móvel para e-commerce desenvolvido com React Native, permitindo aos usuários navegar por produtos, adicionar itens ao carrinho e finalizar compras de forma intuitiva.",
+      t.expeciencias["App de vendas de E-commerce"].descricao,
     technologies: [
       { name: "React Native", icon: Smartphone },
       { name: "Node.js", icon: Globe },
@@ -60,30 +68,30 @@ const projects = [
       github: "https://github.com/onnMarket/on-Markett",
       live: null
     },
-    status: "Concluído",
+    status: t.expeciencias["App de vendas de E-commerce"].status,
     contributors: [
       {
         name: "Eliel Peixoto",
-        role: "Desenvolvedor Frontend",
+        role: t.expeciencias["App de vendas de E-commerce"].Eliel,
         github: "https://github.com/eliel-peixoto",
       },
       {
       name: "Efraim Negreiros",
-      role: "Desenvolvedor Backend",
+      role: t.expeciencias["App de vendas de E-commerce"].Efraim,
       github: "https://github.com/efraimjnegreiros",
       }
     ],
     highlights: [
-      "Backend hospedado no Render",
-      "Banco de dados Supabase",
-      "Builds via EAS",
-      "Testado por usuários reais",
+      t.expeciencias["App de vendas de E-commerce"].highlights[0],
+      t.expeciencias["App de vendas de E-commerce"].highlights[1],
+      t.expeciencias["App de vendas de E-commerce"].highlights[2],
+      t.expeciencias["App de vendas de E-commerce"].highlights[3],
     ],
   },
   {
-    title: "Quiz online de Biologia",
+    title: t.expeciencias["Quiz online de Biologia"].titulo,
     description:
-      "Projeto de quiz interativo desenvolvido para um trabalho escolar de biologia, focado em testar conhecimentos sobre a origem da vida por meio de perguntas de múltipla escolha. O quiz foi feito com criatividade e interface simples para engajar os usuários enquanto revisam conceitos importantes do currículo de biologia.",
+      t.expeciencias["Quiz online de Biologia"].descricao,
     technologies: [
       { name: "Node.js", icon: Server },
       { name: "Express.js", icon: Globe },
@@ -95,28 +103,27 @@ const projects = [
       github: "https://github.com/MateusJuan/Trabalho-de-Biologia-Quiz",
       live: "https://trabalho-de-biologia-quiz.vercel.app/"
     },
-    status: "Concluído",
+    status: t.expeciencias["Quiz online de Biologia"].status,
     contributors: [],
     highlights: [
-      "Perguntas de múltipla escolha sobre temas de biologia",
-      "Interface web interativa",
-      "Feito especificamente para trabalho escolar",
-      "Foco em criatividade e usabilidade",
+      t.expeciencias["Quiz online de Biologia"].highlights[0],
+      t.expeciencias["Quiz online de Biologia"].highlights[1],
+      t.expeciencias["Quiz online de Biologia"].highlights[2],
+      t.expeciencias["Quiz online de Biologia"].highlights[3],
+      t.expeciencias["Quiz online de Biologia"].highlights[4],
     ],
   },
 ]
-
-export function ExperienceSection() {
   return (
     <section id="experiencias" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            <span className="gradient-text">Experiências</span>
+            <span className="gradient-text">{t.expeciencias.titulo}</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Projetos que desenvolvi para aprimorar minhas habilidades e criar soluções reais
+            {t.expeciencias.descricao}
           </p>
         </div>
 
@@ -163,7 +170,7 @@ export function ExperienceSection() {
                       className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
-                      <span className="text-sm">Ver Site</span>
+                      <span className="text-sm">{t.expeciencias.ver}</span>
                     </a>
                   ) : (
                     <div
@@ -171,7 +178,7 @@ export function ExperienceSection() {
                       title="Site não disponível"
                     >
                       <ExternalLink className="w-4 h-4" />
-                      <span className="text-sm">Ver Site</span>
+                      <span className="text-sm">{t.expeciencias.ver}</span>
                     </div>
                   )}
                 </div> {/* Fecha Links */}
@@ -210,7 +217,7 @@ export function ExperienceSection() {
                 {project.contributors && project.contributors.length > 0 && (
                   <div className="mt-6">
                     <h4 className="text-sm font-semibold text-foreground mb-3">
-                      Contribuidores
+                      {t.expeciencias.Contribuidores}
                     </h4>
 
                     <div className="flex flex-wrap gap-3">

@@ -1,9 +1,12 @@
 "use client"
 
 import { Github, ExternalLink } from "lucide-react"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export function GithubSection() {
+  const { t, lang } = useTranslation()
   return (
+    
     <section id="github" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
@@ -17,7 +20,7 @@ export function GithubSection() {
             <span className="gradient-text">GitHub Stats</span>
           </h2>
           <p className="text-muted-foreground">
-            Minhas estatísticas e contribuições no GitHub
+            {t.Github.estatisticas}
           </p>
         </div>
 
@@ -48,7 +51,7 @@ export function GithubSection() {
             className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-medium rounded-full hover:bg-secondary/80 transition-all hover:scale-105"
           >
             <Github className="w-5 h-5" />
-            Ver perfil completo
+            {t.Github.perfil}
             <ExternalLink className="w-4 h-4" />
           </a>
         </div>

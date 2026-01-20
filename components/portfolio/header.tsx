@@ -23,10 +23,10 @@ export function Header({ locale }: HeaderProps) {
 const { t, lang } = useTranslation()
 
 const navItems = [
-  { label: t.inicio, href: "#inicio", icon: Home },
-  { label: t.experiencias, href: "#experiencias", icon: Briefcase },
-  { label: t.github, href: "#github", icon: Github },
-  { label: t.certificados, href: "#certificados", icon: Award },
+  { label: t.header.inicio, href: "#inicio", icon: Home },
+  { label: t.header.experiencias, href: "#experiencias", icon: Briefcase },
+  { label: t.header.github, href: "#github", icon: Github },
+  { label: t.header.certificados, href: "#certificados", icon: Award },
 ]
 
 
