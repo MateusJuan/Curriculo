@@ -5,5 +5,9 @@
   "anos": "anos",
   "pais": "Brasil",
   "bio": "Desenvolvedor apaixonado por criar experiências digitais incríveis. Atualmente focado em desenvolvimento mobile com React Native e backend com Node.js.",
-  "cta": "Ver meus projetos"
+  "cta": "Ver meus projetos",
+  "inicio": "Início",
+  "experiencias": "Experiências",
+  "github": "GitHub",
+  "certificados": "Certificados"
 }

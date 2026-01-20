@@ -5,5 +5,9 @@
   "anos": "years old",
   "pais": "Brazil",
   "bio": "A developer passionate about creating amazing digital experiences. Currently focused on mobile development with React Native and backend development with Node.js.",
-  "cta": "See my projects"
+  "cta": "See my projects",
+  "inicio": "Home",
+  "experiencias": "Experiences",
+  "github": "GitHub",
+  "certificados": "Certificates"
 }

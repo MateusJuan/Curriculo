@@ -7,16 +7,11 @@ import { useRouter, usePathname } from "next/navigation"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 type HeaderProps = {
   locale: "pt" | "en"
 }
-
-const navItems = [
-  { label: "Início", href: "#inicio", icon: Home },
-  { label: "Experiências", href: "#experiencias", icon: Briefcase },
-  { label: "GitHub", href: "#github", icon: Github },
-  { label: "Certificados", href: "#certificados", icon: Award },
-]
 
 const languages = [
   { code: "pt", label: "Português", flag: "/flags/br.png" },
@@ -24,6 +19,17 @@ const languages = [
 ]
 
 export function Header({ locale }: HeaderProps) {
+
+const { t, lang } = useTranslation()
+
+const navItems = [
+  { label: t.inicio, href: "#inicio", icon: Home },
+  { label: t.experiencias, href: "#experiencias", icon: Briefcase },
+  { label: t.github, href: "#github", icon: Github },
+  { label: t.certificados, href: "#certificados", icon: Award },
+]
+
+
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [typedText, setTypedText] = useState("")
