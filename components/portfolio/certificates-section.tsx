@@ -13,6 +13,13 @@ const certificates = [
     pdfUrl: "/certificates/redes-cisco.pdf",
   },
   {
+    title: "Introdução à Segurança Cibernética",
+    instituition: "CISCO",
+    institutionUrl: "https://www.netacad.com/",
+    image: "/certificates/Introduction_to_Cybersecurity_certificate_mjhs2-discente-ifpe-edu-br_c33b850d-4ef0-4b2d-9e6d-d9a2a9f53839.jpg",
+    pdfUrl: "/certificates/Introduction_to_Cybersecurity_certificate_mjhs2-discente-ifpe-edu-br_c33b850d-4ef0-4b2d-9e6d-d9a2a9f53839.pdf",
+  },
+  {
     title: "Python – Projeto e Prática 2",
     institution: "CISCO",
     institutionUrl: "https://www.netacad.com/",
