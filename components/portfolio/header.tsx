@@ -90,7 +90,7 @@ const navItems = [
           {/* LOGO */}
           <div className="flex items-center gap-3">
             <Image
-              src="https://avatars.githubusercontent.com/u/169060996"
+              src="/IMG-20260125-WA0119.jpg"
               alt="Mateus Juan"
               width={40}
               height={40}
