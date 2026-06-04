@@ -36,7 +36,7 @@ export function HeroSection() {
         {/* Avatar */}
         <div className="relative inline-block mb-8">
           <img
-            src="/IMG-20260125-WA0119.jpg"
+            src="https://avatars.githubusercontent.com/u/169060996?v=4"
             alt="Mateus Juan"
             className="w-32 h-32 rounded-full ring-4 ring-primary/30 shadow-2xl mx-auto"
           />
