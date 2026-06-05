@@ -5,7 +5,7 @@ import { useTranslation } from "@/hooks/useTranslation"
 
 
 const currentlyLearning = [
-  { name: "Kotlin", icon: "https://mmcgbl.com/wp-content/uploads/2025/03/img-49.webp" },
+  { name: "Kotlin", icon: "https://blog.frankel.ch/assets/resources/code-improvement-kotlin/kotlin-1.svg" },
 ]
 
 const skills = [
@@ -27,6 +27,7 @@ const frameworks = [
   { name: "Flask", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" },
   { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
   { name: "TailwindCSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+  {name: "Electron", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/330px-Electron_Software_Framework_Logo.svg.png?_=20190331235051"},
 ]
 
 function SkillCard({ name, icon }: { name: string; icon: string }) {
