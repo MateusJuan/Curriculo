@@ -29,23 +29,30 @@ const certificates = [
   {
     title: "21ª SNCT",
     institution: "IFPE",
-    institutionUrl: "#",
+    institutionUrl: "https://portal.ifpe.edu.br/jaboatao/",
     image: "/certificates/snct.jpg",
     pdfUrl: "/certificates/snct.pdf",
   },
   {
     title: "FrontEnd",
     institution: "IATec Academy",
-    institutionUrl: "#",
+    institutionUrl: "https://www.iatec.com/academy/",
     image: "/certificates/frontend-iatec.jpg",
     pdfUrl: "/certificates/frontend-iatec.pdf",
   },
   {
     title: "Menção Honrosa – Maratona Tech",
     institution: "Maratona Tech",
-    institutionUrl: "#",
+    institutionUrl: "https://www.maratona.tech/",
     image: "/certificates/maratona-tech.jpg",
     pdfUrl: "/certificates/maratona-tech.pdf",
+  },
+  {
+    title: "Hackaton IFPE Jaboatão - Terceirão 2025",
+    institution: "IFPE - Campus Jaboatão dos Guararapes",
+    institutionUrl: "https://portal.ifpe.edu.br/jaboatao/",
+    image: "/certificates/HACKATONIFPEJABOATAO2025.jpg",
+    pdfUrl: "/certificates/HACKATONIFPEJABOATAO2025.pdf"
   },
   {
     title: "Algoritmo 40 Horas",
