@@ -29,6 +29,17 @@
     "ver": "View Site",
     "Contribuidores": "Contributors",
 
+  "N4vix":{
+    "titulo":"N4vix",
+    "descricao":"Delivery route planning app for Shopee delivery drivers, with interactive map powered by Mapbox.",
+    "status":"In development",
+    "highlights":[
+      "Backend built in Node.js with ExpressJS",
+      "App built with React Native",
+      "Interactive map with Mapbox"
+    ]
+  },
+
     "Escalas": {
       "titulo": "Scaling System",
       "descricao": "Mobile application (iOS and Android) and WEB application that facilitates communication and organization of church events and services. An independently developed project focused on gaining in-depth experience in Frontend and Backend development.",

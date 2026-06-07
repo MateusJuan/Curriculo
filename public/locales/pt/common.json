@@ -28,6 +28,18 @@
     "descricao": " Projetos que desenvolvi para aprimorar minhas habilidades e criar soluções reais.",
     "ver": "Ver Site",
     "Contribuidores": "Contribuidores",
+
+    "N4vix":{
+      "titulo":"N4vix",
+      "descricao":"Aplicativo de roteirização de entregas para entregadores da Shopee, com mapa interativo integrado via Mapbox",
+      "status":"Em desenvolvimento",
+      "highlights": [
+        "Backend feito em Node.js com Express.js",
+        "App feito com React Native",
+        "Mapa interativo com Mapbox"
+      ]
+    },
+
     "Escalas":{
       "titulo": "Sistema de Escalas",
       "descricao": "Aplicativo para dispositivos móveis (iOS e Android) e aplicação WEB que facilita a comunicação e organização de eventos e cultos para membros da igreja. Projeto desenvolvido de forma independente para criar experiências aprofundadas em desenvolvimento FrontEnd e BackEnd.",
